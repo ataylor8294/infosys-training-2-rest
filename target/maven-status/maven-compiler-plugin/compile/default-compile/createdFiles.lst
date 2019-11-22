@@ -1,0 +1,8 @@
+com\infosys\AppConfig.class
+com\infosys\beans\Flight.class
+com\infosys\service\FlightService.class
+com\infosys\repository\FlighRepositoryImpl.class
+com\infosys\Main.class
+com\infosys\service\FlightServiceImpl.class
+com\infosys\repository\FlightRepository.class
+com\infosys\LoggingAspect.class

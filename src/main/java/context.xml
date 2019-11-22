@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+        xmlns:context="http://www.springframework.org/schema/context">
+        <context:annotation-config />
+        <bean name="generatorService" class = "com.infosys.GeneratorService"/>
+        <bean name= "htmlReportGenerator" class = com.infosys.HtmlReportGenerator"/>
+        <bean name = "pdfReportGenerator" class = "com.infosys.PdfReportGenerator"/>
+        <bean name = "reportGenerator" class = "com.infosys.ReportGenerator"/>
+
+</beans>
