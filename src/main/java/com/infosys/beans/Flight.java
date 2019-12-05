@@ -2,25 +2,44 @@ package com.infosys.beans;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
 import org.springframework.stereotype.Component;
-@Component
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@Entity
+@Table(name = "flight")
 public class Flight {
-	private String flightId;
+	@Id
+	@Column(name="flightid")
+	@JsonProperty("flight_id")
+	private Integer flightId;
+	@Column(name="airlines")
+	@JsonProperty("airlines")
 	private String airlines;
+	@Column(name="source")
+	@JsonProperty("source")
 	private String source;
+	@Column(name="destination")
+	@JsonProperty("destination")
 	private String destination;
-	private Double fare;
-	private Date journeyDate;
+	@Column(name="capacity")
+	@JsonProperty("capacity")
 	private Integer setCount;
-	public String getFlightId() {
+	public Integer getFlightId() {
 		return flightId;
 	}
 	@Override
 	public String toString() {
 		return "Flight [flightId=" + flightId + ", airlines=" + airlines + ", source=" + source + ", destination="
-				+ destination + ", fare=" + fare + ", journeyDate=" + journeyDate + ", setCount=" + setCount + "]";
+				+ destination + ", setCount=" + setCount + "]";
 	}
-	public void setFlightId(String flightId) {
+	public void setFlightId(Integer flightId) {
 		this.flightId = flightId;
 	}
 	public String getAirlines() {
@@ -40,18 +59,6 @@ public class Flight {
 	}
 	public void setDestination(String destination) {
 		this.destination = destination;
-	}
-	public Double getFare() {
-		return fare;
-	}
-	public void setFare(Double fare) {
-		this.fare = fare;
-	}
-	public Date getJourneyDate() {
-		return journeyDate;
-	}
-	public void setJourneyDate(Date journeyDate) {
-		this.journeyDate = journeyDate;
 	}
 	public Integer getSetCount() {
 		return setCount;

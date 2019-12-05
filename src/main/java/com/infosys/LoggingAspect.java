@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingAspect {
 	
-	 @Before("execution(* com.infosys.service.FlightServiceImpl.addFlight(..))")
+	 @Before("execution(* com.infosys.*.*.*(..))")
 	public void execute(JoinPoint joinPoint) {
 		 
-		 System.out.println(joinPoint.getSignature());
+		System.out.println(joinPoint.getSignature());
 		System.out.println("entering logging");
 	}
 	

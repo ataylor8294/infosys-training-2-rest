@@ -3,6 +3,8 @@ package com.infosys;
 import java.sql.Date;
 import java.util.Scanner;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,11 +14,12 @@ import org.springframework.context.support.StaticApplicationContext;
 import com.infosys.service.FlightServiceImpl;
 
 
-
+@SpringBootApplication
 public class Main{
 	
 	public static void main(String args[]) {
-		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		SpringApplication.run(Main.class, args);
+		/*ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		FlightServiceImpl flightService = (FlightServiceImpl)context.getBean(FlightServiceImpl.class);
 		Scanner sc = new Scanner(System.in);
 		int choice=0;
@@ -100,6 +103,6 @@ public class Main{
 			
 		}while (choice!=3);
 		 
-		
+		*/
 	}
 }

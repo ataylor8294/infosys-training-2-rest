@@ -11,11 +11,12 @@ import com.infosys.repository.FlightRepository;
 
 @Service
 public interface FlightService {
-	public void addFlight(String airlines, String source, String destination, Double fare, Date journeyDate, Integer setCount);
-	public void searchFlightBySource(String source);
-	public void searchFlightByDestination(String destination);
-	public void searchFlightByDate(Date journeyDate);
-
+	public void addFlight(Flight flight);
+	public List<Flight> searchFlightBySource(String source);
+	public List<Flight> searchAllFlights();
+	public List<Flight> searchByAirline(String airline);
+	public void delete(Flight flight);
+	public void update(Flight flight);
 
 	
 
